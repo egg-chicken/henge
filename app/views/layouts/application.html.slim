@@ -10,6 +10,8 @@ body
   header
     - if logged_in?
       = current_user.email
+      = link_to("users", users_path)
+      = link_to("products", products_path)
       = link_to("logout", session_path, method: :delete)
     - else
       = link_to("register", new_user_path)
