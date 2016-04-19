@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -50,11 +51,12 @@ class UsersController < ApplicationController
   end
 
   private
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
 end
