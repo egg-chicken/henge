@@ -5,7 +5,7 @@ p
   = @product.name
 p
   strong Link:
-  = @product.link
+  = URI.decode(@product.link)
 
 = link_to 'Edit', edit_product_path(@product)
 '|

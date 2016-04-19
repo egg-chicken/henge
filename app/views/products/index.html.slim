@@ -13,7 +13,9 @@ table
     - @products.each do |product|
       tr
         td = product.name
-        td = product.link
+        td
+          a href=product.link
+            = URI.decode(product.link).truncate(70)
         td = link_to 'Show', product
         td = link_to 'Edit', edit_product_path(product)
         td = link_to 'Destroy', product, data: {:confirm => 'Are you sure?'}, :method => :delete
