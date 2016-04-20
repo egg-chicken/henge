@@ -10,9 +10,11 @@ class ImpressionsController < ApplicationController
 
   def new
     @impression = Impression.new
+    @products = Product.all
   end
 
   def edit
+    @products = Product.all
   end
 
   def create
@@ -44,6 +46,8 @@ class ImpressionsController < ApplicationController
   end
 
   def impression_params
-    params.require(:impression).permit(:title, :user_id, :product_id)
+    attributes = params.require(:impression).permit(:title, :product_id)
+    attributes[:user_id] = current_user.id
+    attributes
   end
 end
