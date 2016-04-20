@@ -22,6 +22,7 @@ class ImpressionsController < ApplicationController
     if @impression.save
       redirect_to(@impression, notice: 'Impression was successfully created.')
     else
+      @products = Product.all
       render(:new)
     end
   end
@@ -30,6 +31,7 @@ class ImpressionsController < ApplicationController
     if @impression.update(impression_params)
       redirect_to(@impression, notice: 'Impression was successfully updated.')
     else
+      @products = Product.all
       render(:edit)
     end
   end
