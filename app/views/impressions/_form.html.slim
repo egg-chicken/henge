@@ -1,0 +1,18 @@
+= form_for @impression do |f|
+  - if @impression.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@impression.errors.count, "error")} prohibited this impression from being saved:"
+      ul
+        - @impression.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :product
+    = f.text_field :product
+  .actions = f.submit
