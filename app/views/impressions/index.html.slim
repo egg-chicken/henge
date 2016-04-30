@@ -1,25 +1,15 @@
-h1 Listing impressions
-
 table
-  thead
-    tr
-      th Title
-      th User
-      th Product
-      th
-      th
-      th
-
   tbody
     - @impressions.each do |impression|
       tr
+        td = impression.user.email
+        td = impression.product.name
         td = impression.title
-        td = impression.user
-        td = impression.product
-        td = link_to 'Show', impression
-        td = link_to 'Edit', edit_impression_path(impression)
-        td = link_to 'Destroy', impression, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td
+          .button-wrapper
+            a.button href=impression_path(impression) = t('.show')
+            a.button href=edit_impression_path(impression) = t('.edit')
+            a.button href=impression_path(impression) data={confirm: t('.are_you_sure'), method: :delete}
+              = t('.destroy')
 
-br
-
-= link_to 'New Impression', new_impression_path
+a.button href=new_impression_path = t('.new_impression')
