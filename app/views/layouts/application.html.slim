@@ -8,15 +8,18 @@ html
   title Henge
 body
   header
-    - if logged_in?
-      = current_user.email
-      = link_to("users", users_path)
-      = link_to("products", products_path)
-      = link_to("impressions", impressions_path)
-      = link_to("logout", session_path, method: :delete)
-    - else
-      = link_to("register", new_user_path)
-      = link_to("login", new_session_path)
+    nav.wrapper
+      h1 Henge
+      .nav-wrapper
+        - if logged_in?
+          a.button href=users_path                         = t(".users")
+          a.button href=products_path                      = t(".products")
+          a.button href=impressions_path                   = t(".impressions")
+          a.button href=session_path data-method="delete"  = t(".logout")
+        - else
+          a.button href=new_user_path     = t('.register')
+          a.button href=new_session_path  = t('.login')
   main
-    = yield
+    .wrapper
+      = yield
   footer
