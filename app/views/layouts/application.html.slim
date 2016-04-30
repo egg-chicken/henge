@@ -10,7 +10,7 @@ body
   header
     nav.wrapper
       h1 Henge
-      .nav-wrapper
+      .button-wrapper
         - if logged_in?
           a.button href=users_path                         = t(".users")
           a.button href=products_path                      = t(".products")
