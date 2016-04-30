@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sorcery'
 gem 'slim-rails'
 gem 'neat'
+gem 'rails-assets-sanitize-css', source: 'https://rails-assets.org'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
