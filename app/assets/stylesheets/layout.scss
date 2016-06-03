@@ -1,0 +1,23 @@
+.wrapper {
+  @include outer-container;
+}
+
+.button-wrapper {
+  float: right;
+  .button {
+    margin-left: 10px;
+  }
+}
+
+header {
+  color: white;
+  background-color: $base-color-1;
+  height: 50px;
+  h1 {
+    font-size: 30px;
+    float: left;
+  }
+  .button-wrapper {
+    margin-top: 8px;
+  }
+}

@@ -1,14 +1,4 @@
-h1 Listing products
-
 table
-  thead
-    tr
-      th Name
-      th Link
-      th
-      th
-      th
-
   tbody
     - @products.each do |product|
       tr
@@ -16,10 +6,11 @@ table
         td
           a href=product.link
             = URI.decode(product.link).truncate(70)
-        td = link_to 'Show', product
-        td = link_to 'Edit', edit_product_path(product)
-        td = link_to 'Destroy', product, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td
+          .button-wrapper
+            a.button href=product_path(product) = t('.show')
+            a.button href=edit_product_path(product) = t('.edit')
+            a.button href=product_path(product) data={confirm: t('.are_you_sure'), method: :delete}
+              = t('.destroy')
 
-br
-
-= link_to 'New Product', new_product_path
+a.button href=new_product_path = t('.new_product')
