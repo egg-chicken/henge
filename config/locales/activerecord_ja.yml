@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（再確認）
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 使用済みのメールアドレスです
+            password:
+              too_short: パスワードが短すぎます
+            password_confirmation:
+              blank: パスワード再入力が与えられていません
+              confirmation: 再入力したパスワードが一致していません

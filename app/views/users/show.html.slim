@@ -1,15 +1,15 @@
-p#notice = notice
+h1 = t('.title')
 
-p
-  strong Email:
-  = @user.email
-p
-  strong Crypted password:
-  = @user.crypted_password
-p
-  strong Salt:
-  = @user.salt
+- if notice
+  #notice = notice
 
-= link_to 'Edit', edit_user_path(@user)
-'|
-= link_to 'Back', users_path
+table
+  tbody
+    tr
+      td = t('.email')
+      td = @user.email
+    tr
+      td = t('.password')
+      td = t('.filtered_password')
+
+a.button href=edit_user_path(@user) = t('.edit')

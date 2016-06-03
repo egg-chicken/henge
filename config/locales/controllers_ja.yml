@@ -1,0 +1,6 @@
+ja:
+  users:
+    create:
+      notice: あなたのアカウントを作成しました。
+    update:
+      notice: アカウント情報を更新しました。
