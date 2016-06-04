@@ -21,5 +21,9 @@ body
           a.button href=new_session_path  = t('.login')
   main
     .wrapper
+      - if notice
+        #notice = notice
+
       = yield
+
   footer

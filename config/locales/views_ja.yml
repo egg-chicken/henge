@@ -3,6 +3,10 @@ ja:
     application:
       login: ログイン
       register: 新規登録
+      logout: ログアウト
+      users: アカウント一覧
+      products: プロダクト一覧
+      impressions: 感想一覧
   sessions:
     new:
       email: メールアドレス
@@ -19,6 +23,10 @@ ja:
       are_you_sure: 本当に削除してもよいですか？
       new_product: 新規作成
   users:
+    form:
+      error_explanation: エラーが発生したため登録できません。下記の点をご確認ください。
+    new:
+      title: 新規登録
     index:
       email: メールアドレス
       show: 詳細
@@ -26,6 +34,15 @@ ja:
       destroy: 削除
       are_you_sure: 本当に削除してもよいですか？
       new_user: 新規作成
+    show:
+      title: アカウント情報
+      email: メールアドレス
+      password: パスワード
+      filtered_password: （表示できません）
+      edit: 編集
+      back: 戻る
+    edit:
+      title: アカウント編集
   impressions:
     index:
       show: 詳細

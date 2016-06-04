@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to(@user, notice: 'User was successfully created.')
+      redirect_to(@user, notice: t('.notice'))
     else
       render(:new)
     end
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: t('.notice') }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
