@@ -15,7 +15,8 @@
   white-space: nowrap;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.active {
     background-color: $base-color-3;
     color: #fff;
   }

@@ -27,3 +27,7 @@ body
       = yield
 
   footer
+
+javascript:
+  var $current = $("nav a[href='#{request.path}']");
+  $current.addClass('active')
