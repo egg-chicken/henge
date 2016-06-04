@@ -4,3 +4,9 @@ ja:
       notice: あなたのアカウントを作成しました。
     update:
       notice: アカウント情報を更新しました。
+  sessions:
+    create:
+      success: ログインしました。
+      failed: ログインできませんでした。メールアドレスとパスワードに誤りがないか、ご確認ください。
+    destroy:
+      notice: ログアウトしました。
