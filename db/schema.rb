@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20160420094948) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name",             null: false
+    t.string   "code",             null: false
     t.string   "email",            null: false
     t.string   "crypted_password"
     t.string   "salt"
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160420094948) do
     t.datetime "updated_at"
   end
 
+  add_index "users", ["code"], name: "index_users_on_code", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

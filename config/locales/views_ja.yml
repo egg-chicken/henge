@@ -36,6 +36,8 @@ ja:
       new_user: 新規作成
     show:
       title: アカウント情報
+      name: ニックネーム
+      code: アカウントID
       email: メールアドレス
       password: パスワード
       filtered_password: （表示できません）
