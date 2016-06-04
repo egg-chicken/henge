@@ -3,6 +3,10 @@ ja:
     application:
       login: ログイン
       register: 新規登録
+      logout: ログアウト
+      users: アカウント一覧
+      products: プロダクト一覧
+      impressions: 感想一覧
   sessions:
     new:
       email: メールアドレス
