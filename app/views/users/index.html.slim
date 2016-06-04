@@ -2,6 +2,8 @@ table
   tbody
     - @users.each do |user|
       tr
+        td = user.code
+        td = user.name
         td = user.email
         td
           .button-wrapper
